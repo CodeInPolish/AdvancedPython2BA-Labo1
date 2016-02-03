@@ -5,7 +5,8 @@
     <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>d02d0b87-0ef7-4517-bdf6-24c9a7d8fbf5</ProjectGuid>
     <ProjectHome>.</ProjectHome>
-    <StartupFile>Ex5B.py</StartupFile>
+    <StartupFile>
+    </StartupFile>
     <SearchPath>
     </SearchPath>
     <WorkingDirectory>.</WorkingDirectory>
@@ -21,52 +22,14 @@
     <DebugSymbols>true</DebugSymbols>
     <EnableUnmanagedDebugging>false</EnableUnmanagedDebugging>
   </PropertyGroup>
-  <ItemGroup>
-    <Compile Include="Ex1A.py" />
-    <Compile Include="Ex1B.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex1C.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex2.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex3A.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex3B.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex4.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex5A.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex5B.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex6.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex7.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Ex8.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Reflexion1.py">
-      <SubType>Code</SubType>
-    </Compile>
-    <Compile Include="Reflexion2.py">
-      <SubType>Code</SubType>
-    </Compile>
-  </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="test_utils.py" />
+    <Compile Include="utils.py" />
+  </ItemGroup>
   <Import Condition="Exists($(PtvsTargetsFile))" Project="$(PtvsTargetsFile)" />
   <Import Condition="!Exists($(PtvsTargetsFile))" Project="$(MSBuildToolsPath)\Microsoft.Common.targets" />
   <!-- Uncomment the CoreCompile target to enable the Build command in

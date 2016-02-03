@@ -19,7 +19,7 @@ def fact(n):
         return result
 
     for i in range(1,n+1):
-        result=*i
+        result*=i
 
     return result
 
@@ -30,7 +30,23 @@ def roots(a, b, c):
     Post: Returns a tuple with zero, one or two elements corresponding
           to the roots of the ax^2 + bx + c polynomial.
     """
-    pass
+    delta = b**2 - 4*a*c
+
+    if(delta < 0 ):
+        return ()
+
+    if(delta == 0):
+        if( a == 0 and b == 0):
+            return ()
+        try:
+            return (-b/2*a)
+        except ZeroDivisionError:
+            return (0)
+        
+    if(a == 0 and b != 0):
+        return (-c/b)
+
+    return ((-b + delta**(1/2)) / (2*a), (-b - delta**(1/2)) / (2*a))
 
 def integrate(function, lower, upper):
     """Approximates the integral of a fonction between two bounds
@@ -41,9 +57,15 @@ def integrate(function, lower, upper):
     Post: Returns an approximation of the integral from 'lower' to 'upper'
           of the specified 'function'.
     """
-    pass
+    x = lower
+    step = 0.00001
+    result = 0
+    while x < float(upper):
+        result += eval(function)*step
+        x += step
+    return result
 
 if __name__ == '__main__':
     print(fact(5))
-    print(roots(1, 0, 1))
+    print(roots(0, 0, 4))
     print(integrate('x ** 2 - 1', -1, 1))

@@ -5,6 +5,7 @@
 
 import os
 from bottle import route, run
+from utils import fact, integrate, roots
 
 @route('/')
 def home():

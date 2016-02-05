@@ -26,6 +26,8 @@
     <PtvsTargetsFile>$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)\Python Tools\Microsoft.PythonTools.targets</PtvsTargetsFile>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="bottle.py" />
+    <Compile Include="server.py" />
     <Compile Include="test_utils.py" />
     <Compile Include="utils.py" />
   </ItemGroup>

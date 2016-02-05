@@ -58,9 +58,10 @@ def integrate(function, lower, upper):
           of the specified 'function'.
     """
     x = lower
-    step = 0.00001
+    step = (abs(lower)+abs(upper))/10000
+    upper_limit = float(upper)
     result = 0
-    while x < float(upper):
+    while x < upper_limit:
         result += eval(function)*step
         x += step
     return result
